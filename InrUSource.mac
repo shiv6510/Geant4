@@ -1,0 +1,36 @@
+# Macro InrUSource.g4mac
+
+#Initialization Commands
+
+/control/verbose 0
+/tracking/verbose 0
+/event/verbose 0
+/gps/verbose 0
+
+#tells the type of particle the source 
+#will emit
+/gps/particle gamma
+
+# Source Geometry
+/gps/pos/type Volume
+/gps/pos/shape Sphere
+/gps/pos/centre 0 0 1 m
+/gps/pos/radius 2.3 cm
+#/gps/pos/inner_radius 0.0001 cm
+
+#Source radiation 
+
+/gps/ang/type iso
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 360 deg
+/gps/ang/minphi 0 deg
+/gps/ang/maxphi 180 deg
+
+/gps/ene/type Lin
+/gps/ene/min 180 keV
+/gps/ene/max 190 keV
+/gps/ene/gradient 1
+#/gps/ene/intercept 100
+
+#/run/beamOn 100
+/gps/source/show
