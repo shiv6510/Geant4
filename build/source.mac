@@ -1,0 +1,25 @@
+# Macro source.g4mac
+
+/gps/particle gamma
+
+# terminal output
+/control/verbose 0
+/tracking/verbose 0
+/event/verbose 0
+/gps/verbose 0
+
+# geometry of GPS
+/gps/pos/type Volume
+/gps/pos/shape Sphere
+/gps/pos/centre 0 0 0 m
+/gps/pos/radius 2.3 cm
+
+# angular distribution
+/gps/ang/type iso
+
+# radiation parameters
+/gps/ene/type User
+/gps/ene/emspec true
+/control/execute spectra_Pu239.mac
+
+/gps/source/show
