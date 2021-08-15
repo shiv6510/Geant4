@@ -5,14 +5,14 @@ from matplotlib import pyplot as plt
 
 def graph(nuclide):
 
-    # load in data points and reference peaks
+    # load in data points and reference peaks (change to your directory)
     data_path = "/home/shiv/Desktop/Atom Workspace/python/geant4/data/"
 
     data = np.loadtxt(data_path + "data_" + nuclide + ".txt")
     max_ene = np.amax(data)
 
     # graph the spectra
-    # DON'T FORGET TO CHANGE MAX BIN
+
     bins = np.arange(0., max_ene+0.05, 0.0005)
 
     # plt.style.use('dark_background')
@@ -20,6 +20,8 @@ def graph(nuclide):
              color='limegreen', histtype='step', zorder=1)
     plt.yscale('log', nonpositive='clip')
 
+    
+    # this code is if you want to overlay the peaks on top of spectra, height might need adjusting.
     # for i in peaks:
     # 	ene = i[0]
     # 	height = i[1]

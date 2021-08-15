@@ -6,6 +6,8 @@ def macro(nuclide):
 
     # set variables
     command = "/gps/hist/point "
+    
+    # change paths to your directories
     peaks_path = "/home/shiv/Desktop/Atom Workspace/python/geant4/peaks/"
     spectra_path = "/home/shiv/Desktop/Atom Workspace/python/geant4/spectra/"
 

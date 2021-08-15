@@ -66,6 +66,11 @@ G4VPhysicalVolume* YourDetectorConstruction::Construct()
                                0);                      // copy number
 
     //Casing Geometry
+    /* 
+        All dimensions are estimated from a paper and a user manual, hard measurements were not provided. 
+        All dimensions are derived from 2 hardcoded measurements, the case radius and height. Changing these
+        values will scale the detector whole without changing the geometry.
+    */
     G4double case_radius = 6.30*cm;
     G4double case_height = 8.33*cm;
     G4double crystal_radius = 0.79*case_radius;

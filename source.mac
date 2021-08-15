@@ -20,6 +20,8 @@
 # radiation parameters
 /gps/ene/type User
 /gps/ene/emspec true
+
+# Define energy distribution of the source
 /control/execute spectra_Pu239.mac
 
 /gps/source/show

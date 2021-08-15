@@ -28,7 +28,7 @@ class YourPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
   private:  // Data member declarations
 
-     G4GeneralParticleSource* fParticleGun = nullptr;
+     G4GeneralParticleSource* fParticleGun = nullptr; // this will be your photon source
      
 };
 

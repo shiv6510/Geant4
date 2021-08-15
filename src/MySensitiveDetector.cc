@@ -23,14 +23,15 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *R0his
 	//G4Track *track = aStep->GetTrack();
 	//G4int trackID = track->GetTrackID();
 
-	G4double energy = aStep->GetTotalEnergyDeposit();
-	TotEnergy += energy;
+	// at every hit, the energy deposited into the crystal is retrieved and accumlated
+	G4double energy = aStep->GetTotalEnergyDeposit(); 
+	TotEnergy += energy; 
 
 	return true;
 }
 
 void MySensitiveDetector::EndOfEvent(G4HCofThisEvent*HCE){
-	//G4cout << TotEnergy << G4endl;
+	// write any non-zero energies to a file (we don't care about 0 energy interactions since we can't detect them in real life)
 	if (TotEnergy != 0){
 		file << TotEnergy << G4endl;
 		file.close();
