@@ -44,10 +44,7 @@ target_link_libraries(sim ${Geant4_LIBRARIES} )
 #
 set(PROJECT_SCRIPTS
   vis.mac
-  InrUSource.mac
   source.mac
-  spectra.mac
-  Cs137_spectra.mac
   spectra_Cs137.mac
   spectra_U238.mac
   spectra_U235.mac
