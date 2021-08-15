@@ -1,5 +1,5 @@
 # Macro spectra.g4mac
-
+# Cs137 peaks
 /gps/hist/type energy
 
 /gps/hist/point 0.0 0.
