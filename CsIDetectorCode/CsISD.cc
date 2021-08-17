@@ -59,7 +59,7 @@ void CsISD :: Initialize(G4HCofThisEvent * hce)
     G4StepPoint* preStepPoint = step->GetPreStepPoint();
  
    G4TouchableHistory* touchable = (G4TouchableHistory*)(preStepPoint->GetTouchable()); //G4touchableHistory outdated but that's the second agrument? 
-   auto copyNo = touchable->GetVolume(2)->GetCopyNo();
+   auto copyNo = touchable->GetVolume()->GetCopyNo();
  //  G4cout<<"Copy number: "<<copyNo<<G4endl; //constantly getting copy number two? Due to the physical volume being labeled 2 
  // G4cout<<"Kinetic energy:  "<<kineticEnergy<<G4endl;//Always getting a kinetic energy of 1 MeV, 2 copynumber, and 0 hit time. 
     G4double hitTime = preStepPoint->GetGlobalTime();
